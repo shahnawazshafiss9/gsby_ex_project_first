@@ -1,11 +1,11 @@
 import React from 'react'
-import Layout from '../component/layout'
+import Templatelayout from '../component/Templatelayout'
 
 const about = () => {
     return (
-        <Layout>
+        <Templatelayout>
             <h1>About us page</h1>
-        </Layout>
+        </Templatelayout>
     )
 }
 

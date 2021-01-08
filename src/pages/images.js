@@ -1,11 +1,11 @@
 import React from 'react'
-import Layout from '../component/Layout'
+import Templatelayout from '../component/Templatelayout'
 import Images from '../examples/Images'
 const images =() => {
     return (
-        <Layout>
+        <Templatelayout>
             <Images />
-        </Layout>
+        </Templatelayout>
     )
 }
 

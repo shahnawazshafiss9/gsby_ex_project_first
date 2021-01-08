@@ -1,6 +1,6 @@
 import React from 'react'
 import { graphql, useStaticQuery } from 'gatsby'
-import img from '../images/1.jpg'
+import img1 from "../images/1.jpg"
 import Image from "gatsby-image"
 
 const getImages = graphql`
@@ -28,7 +28,7 @@ const Images = () => {
         <section className="images">
             <article className="single-image">
                 <h3>Basic image</h3>
-                <img src={img} width='100%' />
+                <img src={img1} width='100%' aria-hidden alt="Picture of me taking a photo of an image" />
             </article>
             <article className="single-image">
                 <h3>Fixed image/blur</h3>

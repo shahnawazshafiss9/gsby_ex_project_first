@@ -1,8 +1,8 @@
 import React from 'react'
 import Header from '../component/Header'
 import Footer from '../component/Footer'
-import './layout.css'
-const Layout = ({children}) => {
+import './styles.css'
+const Templatelayout = ({children}) => {
     return (
         <>
           <Header />
@@ -14,4 +14,4 @@ const Layout = ({children}) => {
     )
 }
 
-export default Layout
+export default Templatelayout

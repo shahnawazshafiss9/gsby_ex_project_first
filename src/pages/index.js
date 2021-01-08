@@ -1,7 +1,7 @@
 import React from "react"
-import Layout from "../component/layout"
+import Templatelayout from "../component/Templatelayout"
 
 export default () => 
-<Layout>
+<Templatelayout>
   Hello welcome page
-</Layout>
+</Templatelayout>
