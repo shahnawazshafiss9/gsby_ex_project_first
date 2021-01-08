@@ -1,6 +1,7 @@
 import React from 'react'
 import Header from '../examples/Header'
 import HeaderStatic from '../examples/HeaderStatic'
+import Templatelayout from '../component/Templatelayout'
 import { graphql } from 'gatsby'
 
 const examples = ({ data }) => {
@@ -10,11 +11,11 @@ const examples = ({ data }) => {
         }
     } = data;
     return (
-        <div>
+        <Templatelayout>
             <h1>Author: {author}</h1>
             <Header />
             <HeaderStatic />
-        </div>
+        </Templatelayout>
 
     )
 }
