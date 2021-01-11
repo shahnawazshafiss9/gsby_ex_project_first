@@ -3,7 +3,7 @@ import { graphql,Link } from 'gatsby'
 import Templatelayout from '../component/Templatelayout'
 import Image from 'gatsby-image'
 
-const ComponentName = ({ data }) => {
+const products = ({ data }) => {
     const {
         allContentfulProducts:{
             nodes:products
@@ -46,4 +46,4 @@ export const query = graphql`
   }
 `
 
-export default ComponentName
+export default products
