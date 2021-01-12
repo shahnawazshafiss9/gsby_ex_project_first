@@ -63,6 +63,21 @@ footer p{
 .page div{
     height: 15rem;
 }
+.single-product{
+    width: 90vw;
+    max-width: 1170px;
+    margin: 3rem auto;
+}
+.productdiv{
+    display: grid; 
+}
+.product_image{
+    padding: 0 2vw;
+}
+.product_description{
+    width: 80vw;
+margin: 0 auto 10rem auto; 
+}
 @media screen and (min-width:992px){
     .images{
         display: grid;
@@ -78,5 +93,22 @@ footer p{
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         column-gap: 2rem;
+    }
+    .single-product{
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        column-gap: 2rem;
+    }
+    .productdiv{
+        display: flex; 
+    }
+    .product_image{
+        display: grid; 
+        column-gap: 2rem;
+    }
+    .product_description{
+        display: grid;
+        column-gap: 2rem;
+        
     }
 }

@@ -16,10 +16,11 @@ const products = ({ data }) => {
                 {products.map(product => {
                     return(
                         <article key={product.id}>
-                            <p>{product.prodName}</p> 
+                            <Link to={`/products/${product.productSlug}`}>{product.prodName}</Link> 
                             <p>{product.prodPrice}</p> 
-                            <Image fluid={product.prodImage.fluid} />
-                            <Link to={`/products/${product.productSlug}`}>More Details</Link>
+                            <Link to={`/products/${product.productSlug}`}>
+                                <Image fluid={product.prodImage.fluid} />
+                            </Link>
                         </article>
                     )
                 })}
@@ -33,7 +34,7 @@ export const query = graphql`
     allContentfulProducts {
       nodes {
         id
-        prodName
+        prodName 
         prodPrice
         productSlug
         prodImage {

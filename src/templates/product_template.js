@@ -11,7 +11,7 @@ const product_template = ({
             prodPrice,
             prodImage: {fixed},
             productSlug,
-            prodDescription
+            prodInfo
         }
     }
 }) => {
@@ -20,16 +20,19 @@ const product_template = ({
     return (
         <Templatelayout>
             <div style={{ textAlign: 'center' }}>
-                <Link to="/products">back to products</Link>
-                <h1>{prodName}</h1>
-
-
+                <Link to="/products">back to products</Link> 
             </div>
             <article key={id}>
-                            <p>{prodName}</p> 
-                            <p>{prodPrice}</p> 
+            <div className="product_image">
+                            <h3>{prodName}</h3>
+                            <h5>{prodPrice}</h5> 
+                            </div>
+                <div className="productdiv">
+                            <div className="product_image">
                             <Image fixed={fixed} alt={prodName} />
-                            <p>{prodDescription.raw}</p>
+                            </div> 
+                            <div className="product_description">{prodInfo.prodInfo}</div>
+                            </div>
                         </article>
         </Templatelayout>
     )
@@ -39,9 +42,9 @@ export const query = graphql
         product: contentfulProducts(productSlug: {eq: $slug}) {
           prodPrice
           prodName
-          prodDescription {
-            raw
-          }
+          prodInfo{
+            prodInfo
+          } 
           productSlug
           prodImage {
             fixed {
